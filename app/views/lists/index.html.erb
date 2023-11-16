@@ -1,0 +1,12 @@
+<div class='container mt-5 col-4'>
+  <h1 class='mb-5'>Listas</h1>
+  <%# <p>Find me in app/views/lists/index.html.erb</p> %>
+  <ul class='p-0'>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+      <%# <li><%= link_to list.name, "lists/#{list.id}" %>
+    <% end %>
+  </ul>
+
+    <h5  class='mt-5'><%= link_to 'Create a new list', new_list_path %></h5>
+</div>
